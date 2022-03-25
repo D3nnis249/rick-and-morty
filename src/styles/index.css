@@ -47,3 +47,29 @@ footer{
 .btn-search{
   background-color: rgb(83, 83, 165)
 }
+
+p{
+  color: white;
+}
+
+.cards{
+list-style: none;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-content: center;
+gap: 20px;
+flex-wrap: wrap;
+margin: 20px;
+padding: 0;
+}
+
+img{
+  height: 12.5em;
+  width: 12.5em;
+}
+
+p{
+  text-align: center;
+}
+
