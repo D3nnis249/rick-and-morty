@@ -1,3 +1,49 @@
 @import "_base.css";
 @import "_fonts.css";
 @import "_colors.css";
+* {
+  box-sizing: border-box;
+  background-color: rgb(42, 42, 42);
+}
+
+body{
+  margin: 0;
+  
+}
+
+h1 {
+  position: sticky;
+  color: rgb(104, 70, 10);
+  text-align: center;
+  background-color: grey;
+  border: 1px black solid;
+}
+
+#searchBar{
+display: flex;
+justify-content: center;
+flex-direction: row;
+height: 2.0rem;
+gap: 1rem;
+border: 1px black solid;
+background-color: grey;
+}
+
+footer{
+  width: 100vw;
+  height: 2rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  border: 1px black solid;
+  z-index: 10;
+  background-color: grey;
+}
+
+#site-search{
+  background-color: rgb(83, 83, 165);
+}
+
+.btn-search{
+  background-color: rgb(83, 83, 165)
+}

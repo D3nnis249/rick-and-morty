@@ -5,6 +5,10 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Patrick Hand SC", cursive;
   font-size: 16px;
+}
+
+body{
+  margin: 0;
 }
