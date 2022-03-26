@@ -152,7 +152,7 @@ Promise.all(promises).then((pages) => {
     /* ===== conditions for all cards ===== */
 
     if (
-      inputText.value === "" &&
+      /*(*/inputText.value === "" /*|| inputText.value.toLowerCase().includes("all"))*/ &&
       statusSelection.value === "alive"
     ) {
       const allCharactersAlive = characters.filter((character) => {
@@ -162,7 +162,7 @@ Promise.all(promises).then((pages) => {
       });
       allCharactersAlive.forEach(renderCharacter);
     } else if (
-      inputText.value === "" &&
+      /*(*/inputText.value === "" /*|| inputText.value.toLowerCase().includes("all"))*/ &&
       statusSelection.value === "dead") {
       const allCharactersDead = characters.filter((character) => {
         return (
@@ -171,7 +171,7 @@ Promise.all(promises).then((pages) => {
       });
       allCharactersDead.forEach(renderCharacter); 
     } else if (
-        inputText.value === "" &&
+        /*(*/inputText.value === "" /*|| inputText.value.toLowerCase().includes("all"))*/ &&
         statusSelection.value === "unknown") {
         const allUnknownCharacters = characters.filter((character) => {
           return (
@@ -180,7 +180,7 @@ Promise.all(promises).then((pages) => {
         });
         allUnknownCharacters.forEach(renderCharacter);
      } else if (
-        inputText.value === "" &&
+        /*(*/inputText.value === "" /*|| inputText.value.toLowerCase().includes("all"))*/ &&
         statusSelection.value === "all status") {
         const allCharacters = characters.filter((character) => {
           return (
