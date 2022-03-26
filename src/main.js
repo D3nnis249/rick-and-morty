@@ -30,10 +30,35 @@ searchButton.addEventListener('click', () => {
     })
     rickCharacters.forEach(renderCharacter);
   } else if (inputText.value.toLowerCase().includes("morty")){    // berücksichtigt eintippen von groß und Kleinbuchstaben (z.B. RicK)
-    const rickCharacters = characters.filter(character => {
+    const mortyCharacters = characters.filter(character => {
       return character.name.includes("Morty")
     })
-    rickCharacters.forEach(renderCharacter);
+    mortyCharacters.forEach(renderCharacter);
+  } else if (inputText.value.toLowerCase().includes("summer")){    // berücksichtigt eintippen von groß und Kleinbuchstaben (z.B. RicK)
+    const summerCharacters = characters.filter(character => {
+      return character.name.includes("Summer")
+    })
+    summerCharacters.forEach(renderCharacter);
+  } else if (inputText.value.toLowerCase().includes("beth")){    // berücksichtigt eintippen von groß und Kleinbuchstaben (z.B. RicK)
+    const bethCharacters = characters.filter(character => {
+      return character.name.includes("Beth")
+    })
+    bethCharacters.forEach(renderCharacter);
+  } else if (inputText.value.toLowerCase().includes("jerry")){    // berücksichtigt eintippen von groß und Kleinbuchstaben (z.B. RicK)
+    const jerry = characters.filter(character => {
+      return character.name.includes("Jerry")
+    })
+    jerry.forEach(renderCharacter);
+  } else if (inputText.value.toLowerCase().includes("abadango") || inputText.value.toLowerCase().includes("cluster") || inputText.value.toLowerCase().includes("princess") ){    // berücksichtigt eintippen von groß und Kleinbuchstaben (z.B. RicK)
+    const abadangoClusterPrincess = characters.filter(character => {
+      return character.name.includes("Abadango Cluster Princess");
+    })
+    abadangoClusterPrincess.forEach(renderCharacter);
+  } else if (inputText.value.toLowerCase().includes("abradolf") || inputText.value.toLowerCase().includes("lincler")){    // berücksichtigt eintippen von groß und Kleinbuchstaben (z.B. RicK)
+    const abradolfLinder = characters.filter(character => {
+      return character.name.includes("Abradolf Lincler");
+    })
+    abradolfLinder.forEach(renderCharacter);
   } 
 })
 
