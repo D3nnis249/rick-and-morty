@@ -74,6 +74,15 @@ p{
 }
 
 /* ===== added code ===== */
+
+select{
+  display: block;
+}
+
+#status-list, #status-list option {
+  background-color: white;
+}
+
 .dead {
   background-color: red;
   border-radius: 10px;

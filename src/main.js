@@ -3,8 +3,8 @@ const numPages = 5;
 
 // ====== added ===========
 
-const inputText = document.querySelector('#site-search');
-const searchButton = document.querySelector('.btn-search')
+const inputText = document.querySelector("#site-search");
+const searchButton = document.querySelector(".btn-search");
 
 // ===== end code ==========
 
@@ -16,20 +16,55 @@ const promises = urls.map((url) => fetch(url).then((res) => res.json()));
 
 Promise.all(promises).then((pages) => {
   const characters = pages.flatMap((page) => page.results);
-  characters.forEach(renderCharacter)
+  characters.forEach(renderCharacter);
 
-// ========== added Code ================
+  // ========== added Code ================
 
-searchButton.addEventListener('click', () => {
-  const cardList = document.querySelector('.cards');
-  cardList.innerHTML = '';
+  searchButton.addEventListener("click", () => {
+    const cardList = document.querySelector(".cards");
+    const statusSelection = document.querySelector("select");
+    cardList.innerHTML = "";
 
-  if (inputText.value.toLowerCase().includes("rick")){    // berücksichtigt eintippen von groß und Kleinbuchstaben (z.B. RicK)
-    const rickCharacters = characters.filter(character => {
-      return character.name.includes("Rick")
-    })
-    rickCharacters.forEach(renderCharacter);
-  } else if (inputText.value.toLowerCase().includes("morty")){    // berücksichtigt eintippen von groß und Kleinbuchstaben (z.B. RicK)
+    if (
+      inputText.value.toLowerCase().includes("rick") &&
+      statusSelection.value === "alive"
+    ) {
+      const rickCharacters = characters.filter((character) => {
+        return (
+          character.name.includes("Rick") && character.status.includes("Alive")
+        );
+      });
+      rickCharacters.forEach(renderCharacter);
+    } else if (
+      inputText.value.toLowerCase().includes("rick") &&
+      statusSelection.value === "dead") {
+      const rickCharacters = characters.filter((character) => {
+        return (
+          character.name.includes("Rick") && character.status.includes("Dead")
+        );
+      });
+      rickCharacters.forEach(renderCharacter); 
+    } else if (
+        inputText.value.toLowerCase().includes("rick") &&
+        statusSelection.value === "unknown") {
+        const rickCharacters = characters.filter((character) => {
+          return (
+            character.name.includes("Rick") && character.status.includes("unknown")
+          );
+        });
+        rickCharacters.forEach(renderCharacter);
+     } else if (
+        inputText.value.toLowerCase().includes("rick") &&
+        statusSelection.value === "all status") {
+        const rickCharacters = characters.filter((character) => {
+          return (
+            character.name.includes("Rick")
+          );
+        });
+        rickCharacters.forEach(renderCharacter);
+      
+
+      /* else if (inputText.value.toLowerCase().includes("morty")){    // berücksichtigt eintippen von groß und Kleinbuchstaben (z.B. RicK)
     const mortyCharacters = characters.filter(character => {
       return character.name.includes("Morty")
     })
@@ -59,13 +94,13 @@ searchButton.addEventListener('click', () => {
       return character.name.includes("Abradolf Lincler");
     })
     abradolfLinder.forEach(renderCharacter);
-  }
-})
+  } 
+})*/
 
-// ============ end Code =================
-
+      // ============ end Code =================
+    }
+  });
 });
-
 
 const upperList = document.querySelector(".cards");
 
@@ -78,6 +113,8 @@ function renderCharacter(character) {
   cardContent.append(picture);
   picture.src = character.image;
   upperList.append(cardContent);
+
+  // ====== added code ======
 
   if (character.status === "Alive") {
     cardContent.classList.add("alive");
