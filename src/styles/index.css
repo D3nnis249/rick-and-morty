@@ -1,14 +1,17 @@
 @import "_base.css";
 @import "_fonts.css";
 @import "_colors.css";
+
+
+
 * {
   box-sizing: border-box;
-  background-color: rgb(42, 42, 42);
+  background-color: rgb(255, 255, 255);
 }
 
-body{
+html, body, #app, .card-container, ul{
   margin: 0;
-  
+  background: linear-gradient(to right, #d4d3dd, #efefbb)
 }
 
 h1 {
@@ -50,14 +53,15 @@ footer{
 
 p{
   color: white;
+  font-family: 'Roboto', cursive;
 }
 
 .cards{
 list-style: none;
 display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-content: center;
+flex-wrap: wrap;
+align-items: space-between;
+justify-content: center;
 gap: 20px;
 flex-wrap: wrap;
 margin: 20px;
@@ -83,18 +87,21 @@ select{
   background-color: white;
 }
 
-.dead {
-  background-color: red;
+li{
   border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.dead {
+  background-color: #ef4444;
 }
 
 .alive {
-  background-color: green;
-  border-radius: 10px;
+  background-color: #65a30d;
 }
 
 .unknown {
-  background-color: yellow;
-  border-radius: 10px;
+  background-color: #eab308;
 }
 /* ===== end added code ===== */
