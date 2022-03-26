@@ -59,7 +59,7 @@ searchButton.addEventListener('click', () => {
       return character.name.includes("Abradolf Lincler");
     })
     abradolfLinder.forEach(renderCharacter);
-  } 
+  }
 })
 
 // ============ end Code =================
@@ -78,7 +78,15 @@ function renderCharacter(character) {
   cardContent.append(picture);
   picture.src = character.image;
   upperList.append(cardContent);
+
+  if (character.status === "Alive") {
+    cardContent.classList.add("alive");
+    names.classList.add("alive");
+  } else if (character.status === "Dead") {
+    cardContent.classList.add("dead");
+    names.classList.add("dead");
+  } else if (character.status === "unknown") {
+    cardContent.classList.add("unknown");
+    names.classList.add("unknown");
+  }
 }
-
-searchButton.addEventListener("click", () => {});
-

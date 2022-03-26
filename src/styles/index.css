@@ -73,3 +73,19 @@ p{
   text-align: center;
 }
 
+/* ===== added code ===== */
+.dead {
+  background-color: red;
+  border-radius: 10px;
+}
+
+.alive {
+  background-color: green;
+  border-radius: 10px;
+}
+
+.unknown {
+  background-color: yellow;
+  border-radius: 10px;
+}
+/* ===== end added code ===== */
