@@ -5,22 +5,39 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/index.css" />
-<!-- ===== FONTS ===== -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <!-- ===== FONTS ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Creepster&family=Eater&family=Frijole&family=Slackey&family=Wallpoet&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Creepster&family=Eater&family=Frijole&family=Slackey&family=Wallpoet&display=swap"
+      rel="stylesheet"
+    />
 
-
-    <script type="module" src="/src/main.js" defer></script>
+    <script type="module" src="src/main.js" defer></script>
     <title>Rick and Morty App</title>
   </head>
   <body>
     <header>
-      <h1><img class="rick icon" src="./src/images/rick_Rick_Sanchez_57324.png" alt="rick"> Rick and Morty Characters <img class="morty" src="./src/images/rick_Morty_Smith_84291.png" alt="morty icon"></h1>
+      <h1>
+        <img
+          class="rick icon"
+          src="./src/images/rick_Rick_Sanchez_57324.png"
+          alt="rick"
+        />
+        Rick and Morty Characters
+        <img
+          class="morty"
+          src="./src/images/rick_Morty_Smith_84291.png"
+          alt="morty icon"
+        />
+      </h1>
     </header>
     <div id="app">
       <section id="searchBar">
@@ -33,20 +50,21 @@
         />
 
         <select id="status-list">
+          <option value="all-status">all status</option>
           <option value="alive">alive</option>
           <option value="dead">dead</option>
           <option value="unknown">unknown</option>
-          <option value="all status">all status</option>
         </select>
 
         <button class="btn-search">Search</button>
+        <button class="btn-search" id="clear-btn">Clear</button>
       </section>
       <section class="card-container">
         <ul class="cards"></ul>
       </section>
     </div>
     <footer>
-        <p>Made&nbsp;&nbsp;&nbsp;by&nbsp;&nbsp;&nbsp;HaAchSaDe</p>
+      <p>Made&nbsp;&nbsp;&nbsp;by&nbsp;&nbsp;&nbsp;HaAchSaDe</p>
     </footer>
   </body>
 </html>
