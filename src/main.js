@@ -1,5 +1,5 @@
 const baseUrl = "https://rickandmortyapi.com/api/character?page=";
-const numPages = 10;
+const numPages = 5;
 
 // ====== added ===========
 
